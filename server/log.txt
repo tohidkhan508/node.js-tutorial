@@ -1,0 +1,18 @@
+// Version
+
+// 
+5.2.1
+
+1st part -> 5
+2nd Part -> 2
+3rd Part -> 1
+
+// 3rd Part (Last Part) - Minor Fixes (Optional)
+Latest -> 5.2.1
+
+// 2nd Part - Recommended Bug Fix (Security Fixes)
+Latest -> 5.2.1
+
+// 3rd Major Release - Major / Breaking Update
+5
+
