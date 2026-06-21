@@ -1,6 +1,3 @@
-// const {add, sub} = require('./math');
+const math = require("./math")
 
-const math = require('./math');
-
-
-console.log("math value is", math);  
+console.log(math.sub(2, 5));

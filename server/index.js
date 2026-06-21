@@ -1,26 +1,16 @@
-const http = require("http");
-const fs = require("fs");
-const url = require("url");
-const express = require("express");
+// const http = require("http");
+// const fs = require("fs");
+// const url = require("url");
 
-// const myServer = http.createServer((req, res) => {
-//    // console.log("New Req Rec.");
-//     console.log(req);
-//     res.end("Hello From Server Again");
-// });
-
-// myServer.listen(8000, () => console.log("Server Started!"));
-
-// function myHandler(req, res) {
+// function myHandler(Req, res) {
 //   if (req.url === "/favicon.ico") return res.end();
-//   const log = `${Date.now()}: ${req.method} ${req.url} New Req Received\n`;
+//   const log = `${Date.now()} ${req.method} ${req.url}: New Req Received\n`;
 //   const myUrl = url.parse(req.url, true);
-//   //   console.log(myUrl);
-//   fs.appendFile("log.txt", log, (err, data) => {
+
+//   fs.appendFile("./log.txt", log, (err, data) => {
 //     switch (myUrl.pathname) {
 //       case "/":
-//         // res.end("Home Page");
-//         if (req.method === "GET") res.end("Home Page");
+//         if (req.method === "GET") res.end("HomePage");
 //         break;
 //       case "/about":
 //         const username = myUrl.query.myname;
@@ -28,17 +18,16 @@ const express = require("express");
 //         break;
 //       case "/search":
 //         const search = myUrl.query.search_query;
-//         res.end("Here are your results for " + search);
+//         res.end("Here are your result for " + search);
 //         break;
 //       case "/signup":
-//         if (req.method === "GET") res.end("This is a signup Form");
+//         if (req.method === "GET") res.end("This is a signup form");
 //         else if (req.method === "POST") {
-//           // DB Query
-//           res.end("Success");
+//           // DB query
+//           res.end("Seccess");
 //         }
-//         break;
 //       default:
-//         res.end("404 Not Found");
+//         res.end("404 not Found");
 //     }
 //   });
 // }
@@ -47,7 +36,11 @@ const express = require("express");
 
 // myServer.listen(8000, () => console.log("Server Started!"));
 
+// express
+const express = require("express");
+
 const app = express();
+const PORT = 8000;
 
 app.get("/", (req, res) => {
   return res.send("Hello From Home Page");
@@ -57,4 +50,4 @@ app.get("/about", (req, res) => {
   return res.send("Hello From About Page");
 });
 
-const myServer = http.createServer(app);
+app.listen(PORT, () => console.log(`Server Started on PORT: ${PORT}`));

@@ -1,45 +1,46 @@
-const fs = require('fs');
-const os = require('os');
+const fs = require("fs");
+const os = require("os");
 
 console.log(os.cpus().length);
 
-// Synchronous call Blocking Requests...
-// fs.writeFileSync("./test.txt", "Hello World");
+// Sync...
+// fs.writeFileSync("./text.txt", "Hello World");
 
-// Asynchronous call Non Blocking requests...
-// fs.writeFile("./test.txt", "Hello World Async", (err) => {});
+// Async...
+// fs.writeFile("./text.txt", "Hello World Async", (err) => {});
 
 // const result = fs.readFileSync("./contacts.txt", "utf-8");
 // console.log(result);
 
-// fs.readFile("./contacts.txt", "utf-8", (err, res) => {
-//     if (err) {
-//         console.log("Error", err);
-//     } else {
-//         console.log(res);
-//     }
-// });
-
-// fs.appendFileSync("./test.txt", `${new Date()} Hey There\n`);
-
-// fs.cpSync("./test.txt", "./copy.txt");
-
-// fs.unlinkSync("./copy.txt");
-// console.log(fs.statSync("./test.txt"));
-// fs.mkdirSync("./my-docs/a/b", {recursive: true});
-
-// console.log("1");
-// Blocking requests
-// const result = fs.readFileSync("./contacts.txt", "utf-8");
-// console.log(result);
-// console.log("2");
-
-// console.log("1");
-// Non Blocking requests
-// fs.readFile("./contacts.txt", "utf-8", (err, res) => {
+// fs.readFile("./contacts.txt", "utf-8", (res, err) => {
+//   if (res) {
 //     console.log(res);
+//   } else {
+//     console.log(err);
+//   }
 // });
-// console.log("2");
 
-// Default Thread Pool size = 4
-// Max? - 8 core cpu - 8
+// fs.appendFileSync("./text.txt", `${Date.now()} Her There\n`);
+
+// fs.cpSync("./text.txt", "./copy.txt");
+
+// fs.unlinkSync("./copy.txt")
+
+// console.log(fs.statSync("./text.txt").isFile());
+
+// fs.mkdirSync("docs/a/b", {recursive: true} )
+
+// console.log("1")
+// // Blocking Req...
+// const result = fs.readFileSync("./contacts.txt", "utf-8");
+// console.log(result);
+// console.log("2")
+
+console.log("1");
+// Non Blocking Req...
+fs.readFile("./contacts.txt", "utf-8", (err, res) => {
+  console.log(res);
+});
+console.log("2");
+console.log("3");
+console.log("4");
