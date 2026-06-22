@@ -1,10 +1,10 @@
 const fs = require("fs");
 
-function LogReqRes(filename) {
+function logReqRes(filename) {
   return (req, res, next) => {
     fs.appendFile(
-      "log.txt",
-      `${new Date()}: ${req.ip} ${req.method}: ${req.path}\n`,
+      filename,
+      `${Date.now()} ${req.ip} ${req.method} ${req.path}\n`,
       (err, data) => {
         next();
       },
@@ -13,5 +13,5 @@ function LogReqRes(filename) {
 }
 
 module.exports = {
-  LogReqRes,
+  logReqRes,
 };

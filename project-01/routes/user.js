@@ -17,6 +17,4 @@ router
   .patch(handleUpdateUserById)
   .delete(handleDeleteUserById);
 
-router.post("/", handleCreateNewUser);
-
 module.exports = router;
