@@ -7,12 +7,12 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon index"
   },
   "dependencies": {
-    "ejs": "^5.0.2",
+    "ejs": "^6.0.1",
     "express": "^5.2.1",
-    "multer": "^2.1.1",
+    "multer": "^2.2.0",
     "nodemon": "^3.1.14"
   }
 }
