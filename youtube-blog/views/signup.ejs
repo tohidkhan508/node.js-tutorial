@@ -2,15 +2,13 @@
 <html lang="en">
   <head>
     <%- include("./partials/head") %>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Signup</title>
   </head>
   <body>
     <%- include("./partials/nav") %>
 
     <div class="container mt-4">
-      <form action="/user/signup" method="post">
+      <form class="p-4" action="/user/signup" method="post">
         <div class="mb-3">
           <label for="fullName" class="form-label">Full Name</label>
           <input
@@ -21,7 +19,7 @@
             aria-describedby="fullName"
           />
         </div>
-        <div class="mb-3">
+        <div class="mb-3 mt-4">
           <label for="exampleInputEmail1" class="form-label"
             >Email address</label
           >
@@ -39,8 +37,8 @@
         <div class="mb-3">
           <label for="exampleInputPassword1" class="form-label">Password</label>
           <input
-            type="password"
             name="password"
+            type="password"
             class="form-control"
             id="exampleInputPassword1"
           />
@@ -49,6 +47,6 @@
       </form>
     </div>
 
-    <%- include("./partials/script") %>
+    <%- include("./partials/scripts") %>
   </body>
 </html>
