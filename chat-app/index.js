@@ -1,10 +1,11 @@
-const http = require("http");
 const express = require("express");
+const http = require("http");
 const path = require("path");
 const { Server } = require("socket.io");
 
 const app = express();
 const PORT = 9000;
+
 const server = http.createServer(app);
 const io = new Server(server);
 
@@ -21,4 +22,4 @@ app.get("/", (req, res) => {
   return res.sendFile("/public/index.html");
 });
 
-server.listen(PORT, () => console.log(`Server Started on PORT: ${PORT}`));
+server.listen(PORT, () => console.log(`Server Started at PORT:${PORT}`));
